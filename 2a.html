@@ -1,0 +1,93 @@
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>2A Personalizados e Presentes</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>💜 2A Personalizados e Presentes 💜</h1>
+    <p>Presentes que falam com você!</p>
+  </header>
+
+  <main class="produtos">
+    <div class="produto" onclick="abrirModal('https://down-br.img.susercontent.com/file/br-11134207-7r98o-lxvok8nadcjjd7', 'Canecas Personalizadas', 'Diversos modelos de canecas com estampas únicas!')">
+      <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-lxvok8nadcjjd7" alt="Caneca personalizada" />
+      <h3>Caneca</h3>
+      <p>Feita sob medida com sua arte favorita!</p>
+      <button>Comprar</button>
+    </div>
+
+    <div class="produto" onclick="abrirModal('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRGBWUeubY2jUcg86Py_jA0VwlJgGs76OGVA&s', 'Chaveiros de Almofada', 'Fofo, macio e com sua estampa preferida!')">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRGBWUeubY2jUcg86Py_jA0VwlJgGs76OGVA&s" alt="Chaveiro de almofada" />
+      <h3>Chaveiro</h3>
+      <p>Ideal pra presentear ou decorar!</p>
+      <button>Comprar</button>
+    </div>
+
+    <div class="produto" onclick="abrirModal('https://images.tcdn.com.br/img/img_prod/1021857/camiseta_personalizada_estampa_frente_e_costa_387_2_19ee606cfa6d6bc210a504b014181760.jpg', 'Camisetas Personalizadas', 'Estilo e personalidade em cada peça!')">
+      <img src="https://images.tcdn.com.br/img/img_prod/1021857/camiseta_personalizada_estampa_frente_e_costa_387_2_19ee606cfa6d6bc210a504b014181760.jpg" alt="Camiseta personalizada" />
+      <h3>Camiseta</h3>
+      <p>Você escolhe a estampa!</p>
+      <button>Comprar</button>
+    </div>
+
+    <div class="produto" onclick="abrirModal('https://static.wixstatic.com/media/973f4d_d6d5e6f9454d4e4eab88da711c5805cd~mv2.jpeg/v1/fill/w_480,h_480,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/973f4d_d6d5e6f9454d4e4eab88da711c5805cd~mv2.jpeg', 'Garrafa Squeeze', 'Garrafinhas estilosas e personalizadas!')">
+<img src="https://static.wixstatic.com/media/973f4d_d6d5e6f9454d4e4eab88da711c5805cd~mv2.jpeg" alt="Garrafa personalizada" />
+
+      <h3>Garrafa Squeeze</h3>
+      <p>Leve sua arte preferida pra todo lugar!</p>
+      <button>Comprar</button>
+    </div>
+
+    <div class="produto" onclick="abrirModal('https://dw0jruhdg6fis.cloudfront.net/producao/31529210/G/cesta_cafe_da_manha_dia_das_maes.jpg', 'Cestas de Café da Manhã', 'Surpreenda com uma cesta linda e personalizada!')">
+      <img src="https://dw0jruhdg6fis.cloudfront.net/producao/31529210/G/cesta_cafe_da_manha_dia_das_maes.jpg" alt="Cesta de café" />
+      <h3>Cesta</h3>
+      <p>Encantadoras e feitas com carinho ❤️</p>
+      <button>Comprar</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 2A Personalizados e Presentes todos os direitos reservados — <span id="dataAtual"></span></p>
+
+    <div class="redes-sociais">
+      <a href="https://wa.me/554198296671" target="_blank">
+        <button class="btn-wpp">📱 WhatsApp</button>
+      </a>
+      <a href="https://www.instagram.com/2apersonalizadose?igsh=ejU3MzEwNG1qYjhw" target="_blank">
+        <button class="btn-insta">📸 Instagram</button>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-conteudo">
+      <span class="fechar" onclick="fecharModal()">×</span>
+      <img id="modalImagem" src="" alt="Produto" />
+      <h2 id="modalTitulo"></h2>
+      <p id="modalDescricao"></p>
+      <button onclick="fecharModal()">Fechar</button>
+    </div>
+  </div>
+
+  <script>
+    function abrirModal(imagem, titulo, descricao) {
+      document.getElementById("modalImagem").src = imagem;
+      document.getElementById("modalTitulo").innerText = titulo;
+      document.getElementById("modalDescricao").innerText = descricao;
+      document.getElementById("modal").style.display = "flex";
+    }
+
+    function fecharModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+
+    document.getElementById("dataAtual").textContent = new Date().toLocaleDateString('pt-BR');
+  </script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #7e5ab6;
+  color: #ddd;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  padding: 30px 20px 20px;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  color: #f0e6ff;
+  text-shadow: 1px 1px 4px #5a3e85;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.3rem;
+  color: #d6c6f5;
+  font-weight: 500;
+}
+
+.produtos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 0 20px 40px;
+  flex-grow: 1;
+}
+
+.produto {
+  background-color: #6a4ea0;
+  border-radius: 15px;
+  width: 190px;
+  padding: 15px;
+  box-shadow: 0 0 15px #593b9c99;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #eee;
+}
+
+.produto:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #7b5eb3;
+}
+
+.produto img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 3px 8px #4b3773;
+}
+
+.produto h3 {
+  margin-bottom: 8px;
+  font-size: 1.3rem;
+  text-shadow: 0 0 6px #462f6c;
+}
+
+.produto p {
+  font-size: 0.9rem;
+  text-align: center;
+  color: #c9b9e6;
+  margin-bottom: 12px;
+}
+
+.produto button {
+  background-color: #8c73d9;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 25px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #f0e6ff;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  box-shadow: 0 3px 8px #5a43a0;
+}
+
+.produto button:hover {
+  background-color: #6b4ea3;
+}
+
+footer {
+  background-color: #5a3e85;
+  padding: 18px 15px 25px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #d1c7f0;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.3);
+}
+
+.redes-sociais {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding-top: 8px;
+}
+
+.redes-sociais button {
+  border: none;
+  border-radius: 25px;
+  padding: 14px 30px;
+  font-weight: 700;
+  cursor: pointer;
+  color: white;
+  font-size: 1.1rem;
+  transition: filter 0.3s ease;
+  user-select: none;
+  width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn-wpp {
+  background-color: #25D366;
+  box-shadow: 0 4px 12px #1ebe5a;
+}
+
+.btn-wpp:hover {
+  filter: brightness(0.85);
+}
+
+.btn-insta {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  box-shadow: 0 4px 12px #b32f82;
+}
+
+.btn-insta:hover {
+  filter: brightness(0.85);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(55, 40, 90, 0.85);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-conteudo {
+  background-color: #5a3e85;
+  border-radius: 20px;
+  padding: 25px;
+  max-width: 400px;
+  width: 100%;
+  color: #eee;
+  box-shadow: 0 0 15px #8b75bb;
+  text-align: center;
+  position: relative;
+}
+
+.modal-conteudo img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  object-fit: cover;
+  height: 200px;
+}
+
+.modal-conteudo h2 {
+  margin: 0 0 12px;
+  font-size: 1.8rem;
+}
+
+.modal-conteudo p {
+  font-size: 1rem;
+  margin-bottom: 18px;
+  line-height: 1.3;
+}
+
+.modal-conteudo button {
+  background-color: #7b5eb3;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 25px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #f0e6ff;
+  transition: background-color 0.3s ease;
+}
+
+.modal-conteudo button:hover {
+  background-color: #4a2a78;
+}
+
+.fechar {
+  position: absolute;
+  right: 15px;
+  top: 12px;
+  font-size: 28px;
+  color: #ddd;
+  cursor: pointer;
+  font-weight: 700;
+  user-select: none;
+}
+
+@media (max-width: 600px) {
+  .produtos {
+    gap: 15px;
+  }
+
+  .produto {
+    width: 140px;
+    padding: 10px;
+  }
+
+  .produto img {
+    height: 110px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .redes-sociais {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .redes-sociais button {
+    width: 100%;
+  }
+}
